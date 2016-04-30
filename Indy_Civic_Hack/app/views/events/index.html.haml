@@ -1,24 +1,27 @@
 .jumbotron
   .page-header
-    Meth is Bad, M'kay.
+    The Meth Mapper
 
-  %h3
-    Here is a map to help explain things.
+  %h3.sub-header
+    .p Using Indiana Data to track and help end Meth use
+    .p
 
+
+%div{:style => "width: auto;"}
+  #map{:style => "width: auto; height: 400px;"}
+  :javascript
+    handler = Gmaps.build('Google');
+    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+      markers = handler.addMarkers(#{raw @hash.to_json});
+      handler.bounds.extendWith(markers);
+      handler.fitMapToBounds();
+    });
 .container
-  %div{:style => "width: auto;"}
-    #map{:style => "width: auto; height: 400px;"}
-    :javascript
-      handler = Gmaps.build('Google');
-      handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-        markers = handler.addMarkers(#{raw @hash.to_json});
-        handler.bounds.extendWith(markers);
-        handler.fitMapToBounds();
-      });
-  %br/
-
   .options-bar
-
+%br/
+.h1.sub-header
+  Information from Data
+.correlations.container
   .row
     .col-xs-4
       .options-bar.correlations
