@@ -3,9 +3,7 @@
     The Meth Mapper
 
   %h3.sub-header
-    .p Using Indiana Data to track and help end Meth use
-    .p
-
+    Using Indiana Data to track and help end Meth use
 
 %div{:style => "width: auto;"}
   #map{:style => "width: auto; height: 400px;"}
@@ -25,8 +23,17 @@
   .row
     .col-xs-4
       .options-bar.correlations
+        .box-header
+          College Towns
+        %p This is the information for you!
     .col-xs-4
       .options-bar.correlations
+        .box-header
+          Rural Areas
+        %p This is the information for you!
     .col-xs-4
       .options-bar.correlations
+        .box-header
+          Cities
+        %p This is the information for you!
 = render partial: "report_form"

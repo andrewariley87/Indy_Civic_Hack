@@ -48,7 +48,15 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
-
+p{
+  color: white;
+  font-size: 12px;
+}
+.box-header{
+  padding-top: 5px;
+  color: white;
+  font-size: 24px;
+}
 .options-bar{
   min-height: 50px;
   background-color: #404040;
