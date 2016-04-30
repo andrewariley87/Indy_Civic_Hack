@@ -18,33 +18,70 @@
 body{
   background-color: #808080;
   text-align: center;
+  font-family: 'Arvo';
+  background-image: url(http://s3images.coroflot.com/user_files/individual_files/original_669908_0g4u8nv7hmht6npeun0dymzmo.jpg);
+  text-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 
 .jumbotron{
   background-color: #404040;
+  background-image: url(http://s3images.coroflot.com/user_files/individual_files/original_669908_0g4u8nv7hmht6npeun0dymzmo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: .9;
+  margin-bottom: 0px;
 }
 
 .page-header{
   text-align: center;
   font-size: 72px;
+  font-weight: 700;
   border-bottom: none;
-  color: black;
+  color: white;
+  text-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+.sub-header{
+  color: white;
   text-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 #map{
   margin-left: auto;
   margin-right: auto;
-  border: 4px solid black;
-  border-radius: 10px;
 }
 
 .options-bar{
   min-height: 50px;
-  border: 2px solid black;
   background-color: #404040;
+  background: rgba(128,128,128,.6);
   padding: 0px 10px 0px 10px;
   margin: 10px 0px 10px 0px;
+  drop-shadow: 0 0 20px rgba(0,0,0,0.5);
 }
 .correlations{
   min-height: 200px;
+  border-radius: 5px;
+}
+input[type=text] {
+    padding:5px 15px;
+    border-radius: 5px;
+    width: 100%;
+}
+.bootstrap_form{
+  color:black;
+}
+.label{
+  color:white;
+  font-weight:200;
+  font-size: 18px;
+}
+input[type=submit]{
+  border-radius: 5px;
+}
+textarea{
+  padding:5px 15px;
+  border-radius: 5px;
+  width: 100%;
+}
+footer{
+  min-height: 50px;
 }
