@@ -1,6 +1,6 @@
 require 'csv'
 
-csv_text = File.read('test/fixtures/methCleaned_160427.csv')
+csv_text = File.read('/Users/bendoane/Downloads/methCleaned_160427.csv')
 csv = CSV.parse(csv_text, :headers => true)
 csv.each do |row|
   Event.create!(
