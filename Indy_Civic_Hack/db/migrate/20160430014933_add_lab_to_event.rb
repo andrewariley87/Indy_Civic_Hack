@@ -20,9 +20,9 @@ class AddLabToEvent < ActiveRecord::Migration
     add_column :events, :city_state_zip, :string
     add_column :events, :county, :string
     add_column :events, :county_fips, :string
-    add_column :events, :latitude, :string
-    add_column :events, :longitude, :string
-    add_column :events, :city_latitude, :string 
-    add_column :events, :city_longitude, :string 
+    add_column :events, :latitude, :float
+    add_column :events, :longitude, :float
+    add_column :events, :city_latitude, :string
+    add_column :events, :city_longitude, :string
   end
 end
