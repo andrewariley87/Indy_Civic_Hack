@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20160430014933) do
     t.string   "city_state_zip"
     t.string   "county"
     t.string   "county_fips"
-    t.string   "latitude"
-    t.string   "longitude"
+    t.float    "latitude"
+    t.float    "longitude"
     t.string   "city_latitude"
     t.string   "city_longitude"
   end
