@@ -16,3 +16,17 @@
 //= require underscore
 //= require gmaps/google
 //= require_tree .
+
+$(document).ready(function() {
+Gmaps.map.callback = function() {
+console.log(Gmaps.map.markers)
+}
+});
+
+$(document).ready(function() {
+  Gmaps.map.callback = function() {
+    _.each(Gmaps.map.markers, function(marker) {
+      Gmaps.map.hideMarker(marker)
+    })
+  }
+});

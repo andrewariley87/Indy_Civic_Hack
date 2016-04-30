@@ -20,6 +20,10 @@
 .h1.sub-header
   Information from Data
 .correlations.container
+    %select{:name => "post[author_id]"}
+      - @mapevents.order(:city).map(&:city).uniq.each do |event|
+        %option{:value => event}= event
+
   .row
     .col-xs-4
       .options-bar.correlations
