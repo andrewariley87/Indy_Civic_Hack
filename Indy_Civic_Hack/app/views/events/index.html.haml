@@ -26,3 +26,44 @@
       .options-bar.correlations
     .col-xs-4
       .options-bar.correlations
+
+%h2
+  Report a Finding
+%div{:style => "width: 800px;"}
+%form{ :action => "", :method => "post"}
+  %fieldset
+    %ol
+      %li
+        %label{:for => "first"} First Name:
+        %br
+        %input{:type => "text", :name => "name", :class => "text"}
+      %br
+      %li
+        %label{:for => "last"} Last Name:
+        %br
+        %input{:type => "text", :name => "mail", :class => "text"}
+      %br
+      %li
+        %label{:for => "mail"} Email:
+        %br
+        %input{:type => "text", :name => "mail", :class => "text"}
+      %br
+      %li
+        %select
+          %option{:value => "Type"} Report Type
+          %option{:value => "Event"} Report an Event
+          %option{:value => "Lab"} Report a Lab
+          %option{:value => "Activity"} Suspicious Activity
+          %option{:value => "Incident"} Incident
+      %br
+      %li
+        %label{:for => "last"} Address of Report:
+        %br
+        %input{:type => "text", :name => "mail", :class => "text"}
+      %br
+      %li
+        %label{:for => "body"} Details:
+        %br
+        %textarea{:name => "body"}
+
+    %input{:type => "submit", :value => "Submit", :class => "button"}
