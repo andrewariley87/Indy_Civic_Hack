@@ -8,6 +8,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'haml'
 
 group :doc do
   gem 'sdoc', require: false
