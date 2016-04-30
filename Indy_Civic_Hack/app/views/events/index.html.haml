@@ -10,3 +10,40 @@
       handler.bounds.extendWith(markers);
       handler.fitMapToBounds();
     });
+
+%h2
+  Report a Finding
+%div{:style => "width: 800px;"}
+%form{ :action => "", :method => "post"}
+  %fieldset
+    %ol
+      %li
+        %label{:for => "first"} First Name:
+        %input{:type => "text", :name => "name", :class => "text"}
+      %br
+      %li
+        %label{:for => "last"} Last Name:
+        %input{:type => "text", :name => "mail", :class => "text"}
+      %br
+      %li
+        %label{:for => "mail"} Email:
+        %input{:type => "text", :name => "mail", :class => "text"}
+      %br
+      %li
+        %select
+          %option{:value => " "}
+          %option{:value => "Event"} Report an Event
+          %option{:value => "Lab"} Report a Lab
+          %option{:value => "Activity"} Suspicious Activity
+          %option{:value => "Incident"} Incident
+      %br
+      %li
+        %label{:for => "last"} Address of Report:
+        %input{:type => "text", :name => "mail", :class => "text"}
+      %br
+      %li
+        %label{:for => "body"} Details:
+      %br
+        %textarea{:name => "body"}
+
+    %input{:type => "submit", :value => "Submit", :class => "button"}
