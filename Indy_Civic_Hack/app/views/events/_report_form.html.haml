@@ -1,42 +1,50 @@
-%h2
+.page-header
   Report a Finding
+  .h1.sub-header
+    Don't let it go. Tell someone if you can help.
 %div{:style => "width: 800px;"}
-%form{ :action => "", :method => "post"}
-  %fieldset
-    %ul
-      %ol
+%bootstrap_form{ :action => "", :method => "post"}
+  .row
+    .col-sm-2.col-sm-offset-5
+      %select.form-control
+        %option{:value => "Type"} Select Report Type
+        %option{:value => "Event"} Report an Event
+        %option{:value => "Lab"} Report a Lab
+        %option{:value => "Activity"} Suspicious Activity
+        %option{:value => "Incident"} Incident
+    %br/
+  .row
+    .col-sm-3.col-sm-offset-3
+      .label
         %label{:for => "first"} First Name:
-        %br
-        %input{:type => "text", :name => "name", :class => "text"}
       %br
-      %ol
+      %input{:type => "text", :name => "name", :class => "text", placeholder: "Johnny"}
+    .col-sm-3
+      .label
         %label{:for => "last"} Last Name:
-        %br
-        %input{:type => "text", :name => "mail", :class => "text"}
       %br
-      %ol
+      %input{:type => "text", :name => "mail", :class => "text", placeholder: "Anonymous"}
+  %br/
+  .row
+    .col-sm-6.col-sm-offset-3
+      .label
         %label{:for => "mail"} Email:
-        %br
-        %input{:type => "text", :name => "mail", :class => "text"}
       %br
-      %ol
-        %select
-          %option{:value => "Type"} Report Type
-          %option{:value => "Event"} Report an Event
-          %option{:value => "Lab"} Report a Lab
-          %option{:value => "Activity"} Suspicious Activity
-          %option{:value => "Incident"} Incident
-      %br
-      %ol
+      %input{:type => "text", :name => "mail", :class => "text", placeholder: "example@email.com"}
+      %br/
+  %br/
+  .row
+    .col-sm-6.col-sm-offset-3
+      .label
         %label{:for => "last"} Address of Report:
-        %br
-        %input{:type => "text", :name => "mail", :class => "text"}
       %br
-      %ol
+      %input{:type => "text", :name => "mail", :class => "text", placeholder: "123 Example St"}
+  %br/
+  .row
+    .col-sm-6.col-sm-offset-3
+      .label
         %label{:for => "body"} Details:
-        %br
-        %textarea{:name => "body"}
-
-      %ol
-        %br
-        %input{:type => "submit", :value => "Submit", :class => "button"}
+      %br
+      %textarea{:name => "body", placeholder: "Tell us what happened"}
+  %br/
+%input{:type => "submit", :value => "Submit", :class => "button", :style => "color:black;"}
