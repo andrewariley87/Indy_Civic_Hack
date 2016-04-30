@@ -1,12 +1,28 @@
-%h1
-  This is the page!
+.jumbotron
+  .page-header
+    Meth is Bad, M'kay.
 
-%div{:style => "width: 800px;"}
-  #map{:style => "width: 800px; height: 400px;"}
-  :javascript
-    handler = Gmaps.build('Google');
-    handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
-      markers = handler.addMarkers(#{raw @hash.to_json});
-      handler.bounds.extendWith(markers);
-      handler.fitMapToBounds();
-    });
+  %h3
+    Here is a map to help explain things.
+
+.container
+  %div{:style => "width: auto;"}
+    #map{:style => "width: auto; height: 400px;"}
+    :javascript
+      handler = Gmaps.build('Google');
+      handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){
+        markers = handler.addMarkers(#{raw @hash.to_json});
+        handler.bounds.extendWith(markers);
+        handler.fitMapToBounds();
+      });
+  %br/
+
+  .options-bar
+
+  .row
+    .col-xs-4
+      .options-bar.correlations
+    .col-xs-4
+      .options-bar.correlations
+    .col-xs-4
+      .options-bar.correlations
