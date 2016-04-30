@@ -4,22 +4,22 @@
 %form{ :action => "", :method => "post"}
   %fieldset
     %ul
-      %li
+      %ol
         %label{:for => "first"} First Name:
         %br
         %input{:type => "text", :name => "name", :class => "text"}
       %br
-      %li
+      %ol
         %label{:for => "last"} Last Name:
         %br
         %input{:type => "text", :name => "mail", :class => "text"}
       %br
-      %li
+      %ol
         %label{:for => "mail"} Email:
         %br
         %input{:type => "text", :name => "mail", :class => "text"}
       %br
-      %li
+      %ol
         %select
           %option{:value => "Type"} Report Type
           %option{:value => "Event"} Report an Event
@@ -27,14 +27,16 @@
           %option{:value => "Activity"} Suspicious Activity
           %option{:value => "Incident"} Incident
       %br
-      %li
+      %ol
         %label{:for => "last"} Address of Report:
         %br
         %input{:type => "text", :name => "mail", :class => "text"}
       %br
-      %li
+      %ol
         %label{:for => "body"} Details:
         %br
         %textarea{:name => "body"}
 
-    %input{:type => "submit", :value => "Submit", :class => "button"}
+      %ol
+        %br
+        %input{:type => "submit", :value => "Submit", :class => "button"}
