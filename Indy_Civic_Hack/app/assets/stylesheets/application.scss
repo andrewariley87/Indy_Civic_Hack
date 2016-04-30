@@ -48,7 +48,15 @@ body{
   margin-left: auto;
   margin-right: auto;
 }
-
+p{
+  color: white;
+  font-size: 12px;
+}
+.box-header{
+  padding-top: 5px;
+  color: white;
+  font-size: 24px;
+}
 .options-bar{
   min-height: 50px;
   background-color: #404040;
@@ -76,6 +84,7 @@ input[type=text] {
 }
 input[type=submit]{
   border-radius: 5px;
+  width: 100%;
 }
 textarea{
   padding:5px 15px;
